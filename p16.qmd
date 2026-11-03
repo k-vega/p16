@@ -1,5 +1,14 @@
 ---
 title: "p16"
-format: html
+author: "Karla Vega"
+format: 
+  html:
+    embed-resources: true
+  typst: default
 ---
+
+Add text analysis here.
+```{r}
+
+```
 
