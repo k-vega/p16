@@ -7,8 +7,22 @@ format:
   typst: default
 ---
 
-Add text analysis here.
-```{r}
-
+```{r Load in packages}
+library(dplyr)
+library(tidytext)
 ```
+
+
+```{r Create lyrics dataframe/tibble}
+fav_lyrics <- c("Pull me, oh, so close",
+                "'Cause you never know",
+                "Just how long our lives will be")
+fav_lyrics_df <- tibble(line = 1:3, lyric = fav_lyrics)
+fav_lyrics_df
+```
+
+```{r One word per row}
+fav_lyrics_df |> unnest_tokens(word, lyric)
+```
+
 
